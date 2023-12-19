@@ -1,7 +1,6 @@
-{
-    "techProducts": [
+[
       {
-        "id": 1,
+        "product_id": 1,
         "name": "Galaxy S22",
         "brand": "Samsung",
         "category": "Mobile",
@@ -16,7 +15,7 @@
         "description": "The Samsung Galaxy S22 is a flagship smartphone with a stunning 6.5-inch display, powerful Exynos 2200 processor, and 128GB of storage."
       },
       {
-        "id": 2,
+        "product_id": 2,
         "name": "MacBook Pro 2023",
         "brand": "Apple",
         "category": "Laptop",
@@ -31,7 +30,7 @@
         "description": "Experience ultimate productivity with the MacBook Pro 2023. Featuring a 14-inch Retina display, Apple M2 Pro chip, and 512GB SSD storage."
       },
       {
-        "id": 3,
+        "product_id": 3,
         "name": "Sony Bravia A90J",
         "brand": "Sony",
         "category": "TV",
@@ -45,7 +44,7 @@
         "description": "Immerse yourself in cinematic visuals with the Sony Bravia A90J. This 65-inch 4K OLED TV delivers stunning picture quality and smart features."
       },
       {
-        "id": 4,
+        "product_id": 4,
         "name": "PlayStation 5",
         "brand": "Sony",
         "category": "Gaming",
@@ -59,7 +58,7 @@
         "description": "Unleash the power of gaming with the PlayStation 5. Featuring a lightning-fast SSD, breathtaking graphics, and a library of incredible games."
       },
       {
-        "id": 5,
+        "product_id": 5,
         "name": "Fitbit Charge 5",
         "brand": "Fitbit",
         "category": "Wearable",
@@ -72,7 +71,7 @@
         "description": "Track your fitness journey with the Fitbit Charge 5. Monitor your heart rate, analyze your sleep patterns, and stay connected on the go."
       },
       {
-        "id": 6,
+        "product_id": 6,
         "name": "DJI Air 2S",
         "brand": "DJI",
         "category": "Drones",
@@ -86,7 +85,7 @@
         "description": "Capture stunning aerial shots with the DJI Air 2S drone. Equipped with a 20MP camera and advanced obstacle avoidance for safe and creative flights."
       },
       {
-        "id": 7,
+        "product_id": 7,
         "name": "Google Nest Hub Max",
         "brand": "Google",
         "category": "Smart Home",
@@ -99,7 +98,7 @@
         "description": "Transform your home with the Google Nest Hub Max. Control your smart home devices, make video calls, and get visual assistance with Google Assistant."
       },
       {
-        "id": 8,
+        "product_id": 8,
         "name": "AirPods Pro",
         "brand": "Apple",
         "category": "Audio",
@@ -113,7 +112,7 @@
         "description": "Immerse yourself in superior sound quality with AirPods Pro. Enjoy active noise cancellation, seamless connectivity, and a comfortable fit."
       },
       {
-        "id": 9,
+        "product_id": 9,
         "name": "Oculus Quest 2",
         "brand": "Oculus",
         "category": "VR",
@@ -127,7 +126,7 @@
         "description": "Step into the world of virtual reality with the Oculus Quest 2. Experience immersive gameplay and entertainment with high-resolution visuals and motion tracking."
       },
       {
-        "id": 10,
+        "product_id": 10,
         "name": "Samsung T7 Portable SSD",
         "brand": "Samsung",
         "category": "Storage",
@@ -141,5 +140,4 @@
         "description": "Carry your data securely with the Samsung T7 Portable SSD. With a capacity of 1TB and blazing-fast USB-C interface, transfer files quickly and efficiently."
       }
     ]
-  }
   

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Container from "../Container/Container";
 import { NavLink } from "react-router-dom";
 import Hamburger from 'hamburger-react'
+import useAuth from "../../../Hooks/useAuth";
 
 const Navbar = () => {
+  const {user} = useAuth();
 
   const [isOpen, setOpen] = useState(false)
 
@@ -43,7 +45,25 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <button className="text-white bg-[#e7422f] rounded-3xl px-10 py-3 text-thin hover:bg-[#c53525]">Shop</button>
+  <div className="dropdown dropdown-end ">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img alt="Tailwind CSS Navbar component" src={user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+        </div>
+      </div>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white text-gray-700 rounded-box w-52 ">
+        <li>
+          <a className="justify-between">
+            Profile
+            <span className="badge">New</span>
+          </a>
+        </li>
+        <li className="font-semibold"><a>{user?.displayName}</a></li>
+        <li><a>Settings</a></li>
+        <li><a>Logout</a></li>
+      </ul>
+    </div>
+    <button className="text-white bg-[#fd534a] rounded-3xl px-10 py-3 text-thin hover:bg-[#c53525]">Shop</button>
   </div>
 </div>
       </Container>
