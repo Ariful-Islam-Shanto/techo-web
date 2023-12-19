@@ -10,6 +10,7 @@ import { createSlice } from '@reduxjs/toolkit';
         reducers : {
             addProducts : (state, action) => {
                 state.products.push(action.payload);
+                console.log("Action payload", action.payload);
             }
         }
 

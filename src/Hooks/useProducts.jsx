@@ -13,15 +13,17 @@ const useProducts = () => {
     queryKey : ['products'],
     queryFn : async () => {
         const {data } = await axiosPublic('/products');
+        if(data) {
+            dispatch(addProducts(data));
+        }
         return data;
     }
    })
 
-   useEffect(() => {
-    if(products) {
-        dispatch(addProducts(products));
-    }
-   }, [dispatch, products])
+//    useEffect(() => {
+    
+    
+//    }, [dispatch, products])
 //   console.log(products);
     return products;
 };
