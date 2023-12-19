@@ -1,12 +1,36 @@
 import React from "react";
+import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Login = () => {
+
+    const {logIn} = useAuth();
 
     const bg = {
         backgroundImage : `url("https://i.postimg.cc/LsXkbhMK/Background-1.jpg")`,
         Opacity: '50%'
     }
 
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        const form = new FormData(e.target);
+        const email = form.get('email');
+        const password = form.get('password');
+
+        console.log(email, password);
+        logIn(email, password) 
+        .then(res => {
+            console.log(res.user);
+            toast.success('Successfully logged in.')
+        })
+        .catch((error) => {
+            console.log(error.message);
+            toast.error(error.message);
+        })
+
+    }
   return (
     <div style={bg} className="min-h-screen flex items-center justify-center pt-20 bg-cover">
             
@@ -15,16 +39,17 @@ const Login = () => {
         </div> */}
         {/* <div className=""> */}
 
-        <div className="relative flex flex-col text-gray-700 bg-transparent backdrop-blur-2xl shadow-md w-96 rounded-xl bg-clip-border">
+        <form onSubmit={handleLogin} className="relative flex flex-col text-gray-700 bg-transparent backdrop-blur-2xl shadow-md w-96 rounded-xl bg-clip-border">
   <div
     className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-[#e7422f] bg-clip-border shadow-gray-900/20">
     <h3 className="block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-gray-300">
       Sign In
     </h3>
   </div>
-  <div className="flex flex-col gap-4 p-6">
+  <div  className="flex flex-col gap-4 p-6">
     <div className="relative h-11 w-full min-w-[200px]">
       <input
+      name="email"
         className="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
         placeholder=" " />
       <label
@@ -34,6 +59,7 @@ const Login = () => {
     </div>
     <div className="relative h-11 w-full min-w-[200px]">
       <input
+      name="password"
         className="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
         placeholder=" " />
       <label
@@ -66,7 +92,7 @@ const Login = () => {
   <div className="p-6 pt-0">
     <button
       className="block w-full select-none rounded-lg bg-[#e7422f] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-300 shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-      type="button">
+      type="submit">
       Sign In
     </button>
     <p className="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
@@ -77,7 +103,7 @@ const Login = () => {
       </a>
     </p>
   </div>
-</div>
+</form>
       {/* </div> */}
     </div>
   );
