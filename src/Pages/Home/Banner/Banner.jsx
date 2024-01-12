@@ -59,7 +59,7 @@ const Banner = () => {
               <p className="mb-5 text-gray-300">
               Elevate your tech quotient with Techo. Uncover a world of innovation where every product is a glimpse into the future, carefully selected to bring you the extraordinary in the realm of technology.
               </p>
-              <button className="px-10 py-3 rounded-sm text-gray-800 hover:bg-gray-200 bg-white font-semibold">Get Started</button>
+              <button className="px-10 py-3 rounded-sm text-gray-200 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-[#be2222] shadow-lg shadow-white/50 bg-[rgb(232,42,42)] font-semibold">Get Started</button>
             </div>
           </div>
         </div>

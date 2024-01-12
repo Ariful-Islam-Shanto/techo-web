@@ -44,7 +44,7 @@ const Navbar = () => {
         {navOptions}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end flex gap-3">
   <div className="dropdown dropdown-end ">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
@@ -63,7 +63,7 @@ const Navbar = () => {
         <li><a>Logout</a></li>
       </ul>
     </div>
-    <button className="text-white bg-[#fd534a] rounded-3xl px-10 py-3 text-thin hover:bg-[#c53525]">Shop</button>
+    <button className="text-white bg-[#e82a2a] rounded-3xl px-10 py-3 text-thin hover:bg-[#b42121]">Shop</button>
   </div>
 </div>
       </Container>
@@ -76,7 +76,7 @@ const Navbar = () => {
       <NavLink
   to="/"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "text-white rounded-sm bg-[#e7422f]" : "text-gray-400 rounded-sm"
+    isPending ? "pending" : isActive ? "text-white rounded-sm bg-[#e82a2a]" : "text-gray-400 rounded-sm"
   }
 >
   <li className="flex items-center justify-center"><a className="w-full flex items-center justify-center">Home</a></li>

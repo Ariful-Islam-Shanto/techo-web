@@ -1,0 +1,27 @@
+#product:hover .overlay {
+    height: 100%;
+    opacity: 0.5;
+    visibility: visible;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+#product:hover .overlay-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+
+  .overlay {
+    visibility: hidden;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: height .5s ease-in-out, opacity .5s ease-in-out;
+  }
+
+  .overlay-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }

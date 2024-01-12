@@ -81,7 +81,7 @@
           "flightTime": "31 minutes",
           "obstacleAvoidance": true
         },
-        "image": "dji_air_2s.jpg",
+        "image": "https://i.postimg.cc/Y0Fv21S2/DJI-AIR-2-S-002-scaled-1.jpg",
         "description": "Capture stunning aerial shots with the DJI Air 2S drone. Equipped with a 20MP camera and advanced obstacle avoidance for safe and creative flights."
       },
       {
@@ -108,7 +108,7 @@
           "batteryLife": "Up to 4.5 hours",
           "noiseCancellation": true
         },
-        "image": "airpods_pro.jpg",
+        "image": "https://i.postimg.cc/hvWW9xK5/Apple-Air-Pods-Pro-2nd-gen-hero-220907-big-jpg-large.jpg",
         "description": "Immerse yourself in superior sound quality with AirPods Pro. Enjoy active noise cancellation, seamless connectivity, and a comfortable fit."
       },
       {
