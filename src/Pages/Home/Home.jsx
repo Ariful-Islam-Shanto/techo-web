@@ -7,6 +7,7 @@ import './script';
 import Showcase from './Showcase/Showcase';
 import Featured from './Featured/Featured';
 import Promotions from '../../Components/Shared/Promotions/Promotions';
+import Offer from './Offer/Offer';
 
 const Home = () => {
     
@@ -44,6 +45,7 @@ const Home = () => {
             <Showcase/>
             <Featured/>
             <Promotions/>
+            <Offer/>
         </div>
     );
 };

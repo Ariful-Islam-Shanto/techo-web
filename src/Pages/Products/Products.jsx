@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 import { Container } from "@mui/material";
 import useProducts from "../../Hooks/useProducts";
 import "./products.css";
+import Promotions from "../../Components/Shared/Promotions/Promotions";
 
 const Products = () => {
   useProducts();
@@ -132,6 +133,7 @@ const Products = () => {
           </div>
         </div>
       </Container>
+      <Promotions/>
     </div>
   );
 };

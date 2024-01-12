@@ -3,7 +3,7 @@ import Container from '../Container/Container';
 
 const Promotions = () => {
     return (
-        <div className='py-16 bg-white'>
+        <div className='py-16 bg-gray-100'>
             <Container>
             <div className="flex flex-col gap-4 pb-12 max-w-2xl mx-auto">
             <h3 className="text-[#e82a2a] text-xl text-center font-medium">Light On The Wallet</h3>
