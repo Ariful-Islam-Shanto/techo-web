@@ -6,29 +6,20 @@ import { addToCart } from '../../Redux Store/CartSlice';
 const ProductCard = ({product}) => {
 
     const dispatch = useDispatch();
-    const {image, _id, name, brand, category, price, description } = product || {};
+    const {image, _id, name, brand, category, price, description, type } = product || {};
 
     return (
-        <div className="relative card border-2 z-10 border-gray-600 stroke-white flex flex-col items-center w-full justify-between  bg-gray-800 p-0 text-gray-200 shadow-xl">
-  <figure className='w-full '><img src={image} alt="product" className='h-[170px] rounded-br-3xl object-cover w-full border-b-2 border-b-black'/>
-  </figure>
-  <div className='absolute left-0 top-[148px] rounded-tl-3xl  z-40 h-6 w-full bg-gray-800'></div>
-  {/* <div className='absolute right-0 top-[108px] rounded-tl-full  z-40 h-10 w-10 bg-gray-800'></div> */}
-  {/* <div className='absolute right-0 top-[118px]   z-40 h-10 w-10 bg-white'></div> */}
-  <div className="w-full space-y-2 p-4">
-    <h2 className="card-title flex-grow">
-     {name}
-    </h2>
-    <div className=" w-full flex items-center justify-between">
-      {/* <button className='px-5 py-2 border-none bg-[#df4840] w-full text-gray-300'>See Details</button> */}
-      <button onClick={() => {
-         
-      }} className='text-left btn border-none border-gray-300 rounded-md w-full text-gray-300'>See details</button>
-      <FaArrowRight className='text'/>
-      
+      <div className="relative flex flex-col items-center justify-center gap-3 ">
+      <img src={image} alt="" srcset="" />
+      <h3 className="text-2xl text-gray-800 font-medium">{type}</h3>
+      <p className="text-[#e82a2a] font-medium">${price}</p>
+      <button className="px-6 py-3 hover:bg-gray-800 rounded-sm text-gray-800 bg-none border-b-2 border-gray-800 hover:text-gray-100">
+        Add to Cart
+      </button>
+      <div className="absolute top-2 left-2 text-lg bg-yellow-400 p-3 py-2 text-gray-100">
+        Sale
+      </div>
     </div>
-  </div>
-</div>
     );
 };
 

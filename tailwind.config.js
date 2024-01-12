@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'allison' : ['Allison', 'cursive'],
+    }
   },
   plugins: [require("daisyui")],
 }
