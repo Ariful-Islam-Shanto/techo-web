@@ -5,6 +5,7 @@ import useProducts from '../../Hooks/useProducts';
 import { useSelector } from 'react-redux';
 import './script';
 import Showcase from './Showcase/Showcase';
+import Featured from './Featured/Featured';
 
 const Home = () => {
     
@@ -40,6 +41,7 @@ const Home = () => {
             <Banner/>
             {/* <Todo/> */}
             <Showcase/>
+            <Featured/>
         </div>
     );
 };
