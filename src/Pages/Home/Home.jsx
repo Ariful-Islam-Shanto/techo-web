@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import './script';
 import Showcase from './Showcase/Showcase';
 import Featured from './Featured/Featured';
+import Promotions from '../../Components/Shared/Promotions/Promotions';
 
 const Home = () => {
     
@@ -42,6 +43,7 @@ const Home = () => {
             {/* <Todo/> */}
             <Showcase/>
             <Featured/>
+            <Promotions/>
         </div>
     );
 };
