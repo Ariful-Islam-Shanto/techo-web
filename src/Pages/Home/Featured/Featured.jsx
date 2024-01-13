@@ -6,14 +6,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Container from "../../../Components/Shared/Container/Container";
+import useProducts from "../../../Hooks/useProducts";
+import { useSelector } from "react-redux";
 
 const Featured = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("/products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+    useProducts();
+
+    const products = useSelector((state) => state.productReducer.products);
+    console.log(products);
+
   return (
     <div className="bg-white py-16">
       <Container>
@@ -36,7 +37,7 @@ const Featured = () => {
           className="mySwiper"
         >
           {products &&
-            products?.slice(0, 8)?.map((product, idx) => (
+            products[0]?.slice(0, 8)?.map((product, idx) => (
               <SwiperSlide key={idx}>
                 <div className="relative flex flex-col items-center justify-center gap-3 ">
                   <img src={product?.image} alt="" srcset="" />

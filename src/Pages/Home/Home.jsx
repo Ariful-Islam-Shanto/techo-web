@@ -8,6 +8,7 @@ import Showcase from './Showcase/Showcase';
 import Featured from './Featured/Featured';
 import Promotions from '../../Components/Shared/Promotions/Promotions';
 import Offer from './Offer/Offer';
+import NewProducts from './New Products/NewProducts';
 
 const Home = () => {
     
@@ -46,6 +47,7 @@ const Home = () => {
             <Featured/>
             <Promotions/>
             <Offer/>
+            <NewProducts/>
         </div>
     );
 };
